@@ -1,10 +1,10 @@
 import { useQuery } from "@apollo/client";
-import { GET_CLIENT } from "../queries/clientQueries";
+import { GET_CLIENTS } from "../queries/clientQueries";
 import { ClientRow } from "./ClientRow";
 import Spinner from "./Spinner";
 
 export default function Clients() {
-  const { loading, error, data } = useQuery(GET_CLIENT);
+  const { loading, error, data } = useQuery(GET_CLIENTS);
 
   if (loading) return <Spinner />;
   if (error) return <p>Something Went Wrong</p>;
